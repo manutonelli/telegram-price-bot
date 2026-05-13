@@ -1,1 +1,32 @@
-
+[
+  {
+    "name": "iPad Air M2",
+    "keywords": ["ipad air m2"],
+    "max_price": 900000,
+    "min_discount_pct": 15
+  },
+  {
+    "name": "Samsung 65\" QLED",
+    "keywords": ["samsung qled 65", "samsung 65 qled"],
+    "max_price": 600000,
+    "min_discount_pct": 20
+  },
+  {
+    "name": "Sony WH-1000XM5",
+    "keywords": ["sony wh-1000xm5", "sony xm5"],
+    "max_price": 250000,
+    "min_discount_pct": 15
+  },
+  {
+    "name": "MacBook Air M2",
+    "keywords": ["macbook air m2"],
+    "max_price": 1500000,
+    "min_discount_pct": 10
+  },
+  {
+    "name": "PlayStation 5",
+    "keywords": ["playstation 5", "ps5"],
+    "max_price": 700000,
+    "min_discount_pct": 10
+  }
+]
