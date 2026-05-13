@@ -20,4 +20,23 @@ jobs:
       - name: Install dependencies
         run: pip install -r telegram-price-bot/requirements.txt
 
-      - name:
+      - name: Restore seen.json cache
+        uses: actions/cache@v4
+        with:
+          path: telegram-price-bot/seen.json
+          key: seen-json-${{ github.run_id }}
+          restore-keys: seen-json-
+
+      - name: Run price bot
+        working-directory: telegram-price-bot
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python main.py
+
+      - name: Save seen.json
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: telegram-price-bot/seen.json
+          key: seen-json-${{ github.run_id }}
